@@ -32,6 +32,8 @@
 <script src="<?= base_url('assets') ?>/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url('assets') ?>/dist/js/pages/dashboard.js"></script>
+<!-- Toastr -->
+<script src="<?= base_url('assets') ?>/plugins/toastr/toastr.min.js"></script>
 
 <!-- Global Script -->
 <script src="<?= base_url('assets') ?>/custom-js/global/script.js"></script>

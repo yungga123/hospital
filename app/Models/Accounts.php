@@ -31,10 +31,13 @@ class Accounts extends Model
     protected $skipValidation = false;
 
 
-    public function findUser($user_id) {
-        return $this->find($user_id);
+    public function findUser($user) {
+        return $this->find($user);
     }
 
-
+    public function findUsername($user) {
+        return $this->where('username',$user)
+                    ->findAll();
+    }
     
 }
