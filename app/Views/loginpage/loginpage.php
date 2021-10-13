@@ -30,15 +30,16 @@
 
         <?= form_open('LoginPage/validate_user',["id" => "form-login"]) ?>
           <div class="input-group mb-3">
-            <input type="text" name="username" class="form-control" placeholder="Username">
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-user-alt"></span>
               </div>
             </div>
           </div>
+      
           <div class="input-group mb-3">
-            <input type="password" name="password" class="form-control" placeholder="Password">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
@@ -104,13 +105,18 @@
           success: function(response) {
             if (response.success == true) {
               toastr.success("Logged in");
+              $('#username').removeClass("is-invalid");
+              $('#password').removeClass("is-invalid");
             } else {
-
+              $('#username').removeClass("is-invalid");
+              $('#password').removeClass("is-invalid");
               $.each(response.messages,function(key,value){
                 if (value != ''){
+                  $('#'+key).addClass("is-invalid");
                   toastr.error(value);
+                } else {
+                  $('#'+key).addClass("is-valid");
                 }
-                
               });
             } 
 
