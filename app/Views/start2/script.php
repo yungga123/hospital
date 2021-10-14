@@ -1,4 +1,0 @@
-    <!-- SCRIPT HERE -->
-
-</body>
-</html>

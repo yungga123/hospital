@@ -15,7 +15,7 @@ class LoginPage extends BaseController
             $data['title'] = 'Hospital';
             echo view('loginpage/loginpage', $data);
         } else {
-            return redirect()->route('dashboard1');
+            return redirect()->to('dashboard');
         }
         
     }
@@ -111,6 +111,6 @@ class LoginPage extends BaseController
         $session = session();
         $session->destroy();
 
-        return redirect()->route('login');
+        return redirect()->to('');
     }
 }

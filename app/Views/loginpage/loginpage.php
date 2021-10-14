@@ -148,7 +148,7 @@
               $('#password').removeClass("is-invalid");
 
               setTimeout(() => {
-                window.location = ("<?= site_url("dashboard1") ?>")
+                window.location = ("<?= site_url("dashboard") ?>")
               }, 1500);
               
 

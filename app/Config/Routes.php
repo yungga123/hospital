@@ -34,12 +34,9 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'LoginPage::index');
 
 //Dashboard
-$routes->get('/dashboard1', 'Home::test');
-$routes->get('/dashboard2', 'Home::test2');
-$routes->get('/dashboard3', 'Home::test3');
+$routes->get('/dashboard', 'Dashboard::dashboard');
 
 //Login
-$routes->get('/login', 'LoginPage::index');
 $routes->get('/logout', 'LoginPage::session_destroy');
 
 /*
