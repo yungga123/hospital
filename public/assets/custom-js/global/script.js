@@ -17,9 +17,12 @@ $(document).ready(function(){
         return this.href == url;
     }).addClass('active');
 
-    $('ul.nav-treeview a').filter(function() {
+    // for sidebar menu entirely but not cover treeview
+    $('ul.nav-sidebar a').filter(function() {
         return this.href == url;
-    }).parentsUntil(".sidebar-menu > .nav-treeview").children(0).addClass('active');
+    }).addClass('active');
+
+
 
     toastr.options = {
         "closeButton": false,

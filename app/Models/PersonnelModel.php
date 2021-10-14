@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Personnel extends Model {
+class PersonnelModel extends Model {
 
     protected $table = 'personnel';
     protected $primaryKey = 'id';
@@ -22,10 +22,11 @@ class Personnel extends Model {
     protected $deletedField = 'deleted_at';
     
     protected $validationRules = [
-        'personnel id' => 'required|integer|max_length[11]',
-        'username' => 'required|alpha_numeric|max_length[200]|is_unique[accounts.username]',
-        'password' => 'required|alpha_numeric|max_length[200]',
-        'class' => 'required|integer|max_length[5]'
+        'firstname' => 'required|max_length[300]|alpha_numeric_spaces',
+        'middlename' => 'required|max_length[300]|alpha_numeric_spaces',
+        'lastname' => 'required|max_length[300]|alpha_numeric_spaces',
+        'gender' => 'required|max_length[100]',
+        'position' => 'required|max_length[100]',
     ];
     protected $validationMessages = [];
     protected $skipValidation = false;

@@ -17,7 +17,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('LoginPage');
+$routes->setDefaultController('LoginPageController');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -31,13 +31,16 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'LoginPage::index');
+$routes->get('/', 'LoginPageController::index');
 
-//Dashboard
-$routes->get('/dashboard', 'Dashboard::dashboard');
+//DashboardController
+$routes->get('/dashboard', 'DashboardController::dashboard');
 
-//Login
-$routes->get('/logout', 'LoginPage::session_destroy');
+//Login Controller
+$routes->get('/logout', 'LoginPageController::session_destroy');
+
+//PatiensController
+$routes->get('/patients', 'PatientsController::index');
 
 /*
  * --------------------------------------------------------------------

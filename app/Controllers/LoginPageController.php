@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\Accounts;
-use App\Models\Personnel;
+use App\Models\AccountsModel;
+use App\Models\PersonnelModel;
 
-class LoginPage extends BaseController
+class LoginPageController extends BaseController
 {
     
     public function index()
@@ -27,7 +27,7 @@ class LoginPage extends BaseController
             'messages' => ''
         ];
 
-        $userModel = new Accounts();
+        $userModel = new AccountsModel();
         $request = $this->request;
         $username = $request->getPost('username');
         $user_data = $userModel->findUsername($username);
@@ -61,7 +61,7 @@ class LoginPage extends BaseController
             $validate['success'] = true;
 
             $session = session();
-            $personnelModel = new Personnel();
+            $personnelModel = new PersonnelModel();
             $personnelData = $personnelModel->findUser($personnel_id);
 
             $array = [
@@ -83,7 +83,7 @@ class LoginPage extends BaseController
     }
 
     public function register_user() {
-        $accountsModel = new Accounts();
+        $accountsModel = new AccountsModel();
 
         $validate = [
             'success' => false,

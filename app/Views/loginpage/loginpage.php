@@ -28,7 +28,7 @@
       <div class="card-body login-card-body">
         <p class="login-box-msg">Please sign in to start your session</p>
 
-        <?= form_open('LoginPage/validate_user',["id" => "form-login"]) ?>
+        <?= form_open('LoginPageController/validate_user',["id" => "form-login"]) ?>
           <div class="input-group mb-3">
             <input type="text" id="username" name="username" class="form-control" placeholder="Username">
             <div class="input-group-append">
@@ -79,7 +79,7 @@
             </button>
         </div>
         <div class="modal-body">
-          <?= form_open("LoginPage/register_user",["id" => "form-register"]) ?>
+          <?= form_open("LoginPageController/register_user",["id" => "form-register"]) ?>
           <div class="form-group">
             <label for="username">Username</label>
             <input type="text" name="username" id="model_username" class="form-control" placeholder="" aria-describedby="helpId">
