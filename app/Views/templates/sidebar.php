@@ -1,3 +1,7 @@
+<?php
+$session = session();
+?>
+
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 <!-- Brand Logo -->
@@ -14,7 +18,7 @@
         <img src="<?= base_url('assets') ?>/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
     </div>
     <div class="info">
-        <a href="#" class="d-block">Edrei Donatoda</a>
+        <a href="#" class="d-block"><?= $session->get('firstname').' '.$session->get('lastname') ?></a>
     </div>
     </div>
 

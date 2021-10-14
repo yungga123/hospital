@@ -38,6 +38,10 @@ $routes->get('/dashboard1', 'Home::test');
 $routes->get('/dashboard2', 'Home::test2');
 $routes->get('/dashboard3', 'Home::test3');
 
+//Login
+$routes->get('/login', 'LoginPage::index');
+$routes->get('/logout', 'LoginPage::session_destroy');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

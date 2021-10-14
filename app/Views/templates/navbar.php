@@ -14,6 +14,10 @@
         <i class="fas fa-th-large"></i>
     </a>
     </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="<?= site_url('logout') ?>">Logout</a>
+    </li>
 </ul>
 </nav>
 <!-- /.navbar -->
