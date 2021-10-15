@@ -31,6 +31,8 @@
 
 
                 } else {
+
+                    toastr.error("Errors Occured!");
                     $('#firstname').removeClass("is-invalid").addClass('is-valid');
                     $('#lastname').removeClass("is-invalid").addClass('is-valid');
                     $('#middlename').removeClass("is-invalid").addClass('is-valid');

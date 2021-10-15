@@ -41,6 +41,7 @@ $routes->get('/logout', 'LoginPageController::session_destroy');
 
 //PatiensController
 $routes->get('/patients', 'PatientsController::index');
+$routes->get('/patient-list', 'PatientsController::patient_list');
 
 /*
  * --------------------------------------------------------------------

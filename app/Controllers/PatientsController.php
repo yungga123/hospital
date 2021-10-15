@@ -11,11 +11,29 @@ class PatientsController extends BaseController {
 
         if ($session->get('logged_in')) {
             $data['title'] = 'Patients';
-
             echo view('templates/header',$data);
             echo view('templates/navbar');
             echo view('templates/sidebar');
             echo view('patients/patients');
+            echo view('templates/footer');
+            echo view('templates/g-script');
+            echo view('patients/script');
+
+        } else {
+            redirect()->to('');
+        }
+
+    }
+
+    public function patient_list() {
+        $session = session();
+
+        if ($session->get('logged_in')) {
+            $data['title'] = 'List of Patients';
+            echo view('templates/header',$data);
+            echo view('templates/navbar');
+            echo view('templates/sidebar');
+            echo view('patients/patients_list');
             echo view('templates/footer');
             echo view('templates/g-script');
             echo view('patients/script');
